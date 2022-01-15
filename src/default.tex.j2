@@ -8,7 +8,10 @@
 {%- macro renderAnswerValue(question, reply, path, humanIdentifier) %}
 {%- if reply is of_type("StringReply") %}
 \begin{itemize}
-  \item[\CheckmarkBold] {{reply.value}}
+  \item[\CheckmarkBold] 
+    \begin{markdown}
+    {{reply.value}}
+    \end{markdown}
 \end{itemize}
 {% else %}
 \begin{itemize}

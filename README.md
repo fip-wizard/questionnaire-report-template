@@ -4,6 +4,10 @@ This generic *default* template for [Data Stewardship Wizard](https://ds-wizard.
 
 ## Changelog
 
+### 2.4.2
+
+- (GOFAIR) Render integration value as Markdown
+
 ### 2.4.1
 
 - (GOFAIR) Removed rendering of reports

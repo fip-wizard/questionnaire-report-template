@@ -1,7 +1,7 @@
 {
   "organizationId": "gofair",
   "templateId": "questionnaire-report",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "name": "Questionnaire Report",
   "description": "Exported questions and answers from a questionnaire",
   "recommendedPackageId": null,
