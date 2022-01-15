@@ -276,21 +276,12 @@
     \end{center}
 \end{titlepage}
 
-\chapter*{Report Summary}
-
-{{ renderReport(dc.report.total_report) }}
-
 {% for chapter in dc.km.chapters %}
 {% set chapterId = loop.index|roman %}
 \chapter{{ "{" }}{{chapter.title}}{{ "}" }}
 \label{{ "{" }}{{chapter.uuid}}{{ "}" }}
 % uuid: {{chapter.uuid}}
 % path: {{chapter.uuid}}
-
-{% for chapterReport in chapter.reports %}
-\section*{Chapter Summary}
-{{ renderReport(chapterReport) }}
-{% endfor %}
 
 {% for question in chapter.questions %}
 {{ renderQuestion(question, chapter.uuid, chapterId ~ "." ~ loop.index, True) }}

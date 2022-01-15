@@ -245,10 +245,6 @@
       <section class="chapter" id="{{chapter.uuid}}" data-uuid="{{chapter.uuid}}" data-type="chapter">
         <h2 class="title">{{humanIdentifier|roman}}. {{chapter.title}}</h2>
 
-        {% for chapterReport in chapter.reports %}
-          {{ renderReport(chapterReport) }}
-        {% endfor %}
-
         <section class="questions">
           <h3 class="title">Questions</h3>
           {% for question in chapter.questions %}
@@ -318,9 +314,6 @@
 {%- endmacro -%}
 {%- macro renderContent() -%}
   <main>
-    <section class="total-report">
-      {{ renderReport(dc.report.total_report) }}
-    </section>
     {% for chapter in dc.km.chapters %}
       {{ renderChapter(chapter, loop.index) }}
     {% else %}

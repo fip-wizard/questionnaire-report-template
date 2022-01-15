@@ -193,10 +193,6 @@
       <section>
         <h1>{{humanIdentifier|roman}}. {{chapter.title}}</h1>
 
-        {% for chapterReport in chapter.reports %}
-          {{ renderReport(chapterReport) }}
-        {% endfor %}
-
         <section>
           {% for question in chapter.questions %}
             {{ renderQuestion(question, chapter.uuid, loop.index) }}
@@ -259,9 +255,6 @@
 {%- endmacro -%}
 {%- macro renderContent() -%}
   <div>
-    <div>
-      {{ renderReport(dc.report.total_report) }}
-    </div>
     {% for chapter in dc.km.chapters %}
       \newpage
       {{ renderChapter(chapter, loop.index) }}

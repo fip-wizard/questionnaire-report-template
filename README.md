@@ -4,9 +4,14 @@ This generic *default* template for [Data Stewardship Wizard](https://ds-wizard.
 
 ## Changelog
 
+### 2.4.1
+
+- (GOFAIR) Removed rendering of reports
+
 ### 2.4.0
 
 - Adjusted to template metamodel version 7 (released in DSW 3.7.0)
+- (GOFAIR) Removed texts for questions and chapters
 
 ### 2.3.0
 

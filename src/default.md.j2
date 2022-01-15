@@ -129,10 +129,6 @@
 {%- macro renderChapter(chapter, humanIdentifier) -%}
 ## {{humanIdentifier|roman}}. {{chapter.title}}
 
-{% for chapterReport in chapter.reports %}
-{{ renderReport(chapterReport) }}
-{% endfor %}
-
 ### Questions
 
 {% for question in chapter.questions %}
@@ -164,10 +160,6 @@
 * Description: **{{ dc.qtn.description }}**
 {%- endif %}
 * Created at: **{{ dc.doc.created_at|datetime_format("%d %b %Y") }}**
-
-## Report
-
-{{ renderReport(dc.report.total_report) }}
 
 ---
 
