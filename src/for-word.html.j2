@@ -67,11 +67,6 @@
     <p>
       ✔️ <span>{{ hi|of_alphabet }}. {{answer.label}}</span>
     </p>
-    {% if answer.advice %}
-    <p>
-      <b>Advice:</b> {{answer.advice|markdown}}
-    </p>
-    {% endif %}
     {% if answer.followups|length > 0 %}
       <div>
         {% set hiPrefix = humanIdentifier ~ "." %}
@@ -157,8 +152,6 @@
 
     {{ renderQuestionExtras(question) }}
 
-    {{ question.text|markdown }}
-
     {{ renderQuestionReply(question, path, humanIdentifier) }}
   </div>
 {%- endmacro -%}
@@ -199,7 +192,6 @@
 {%- macro renderChapter(chapter, humanIdentifier) -%}
       <section>
         <h1>{{humanIdentifier|roman}}. {{chapter.title}}</h1>
-        <p>{{chapter.text|markdown}}</p>
 
         {% for chapterReport in chapter.reports %}
           {{ renderReport(chapterReport) }}

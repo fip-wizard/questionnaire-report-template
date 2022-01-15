@@ -28,13 +28,6 @@
   \item[\CheckmarkBold] {{ hi|of_alphabet }}. {{ answer.label }}
 \end{itemize}
 
-{% if answer.advice -%}
-\noindent
-\begin{markdown}
-{{answer.advice}}
-\end{markdown}
-{%- endif %}
-
 {% if answer.followups|length > 0 -%}
 {%- set hiPrefix = humanIdentifier ~ "." -%}
 {%- for question in answer.followups -%}
@@ -145,13 +138,6 @@
 % path: {{path}}
 
 {{ renderQuestionExtras(question) }}
-
-{% if question.text %}
-\noindent
-\begin{markdown}
-{{question.text}}
-\end{markdown}
-{% endif %}
 
 {{ renderQuestionReply(question, path, humanIdentifier) }}
 
@@ -300,12 +286,6 @@
 \label{{ "{" }}{{chapter.uuid}}{{ "}" }}
 % uuid: {{chapter.uuid}}
 % path: {{chapter.uuid}}
-
-{%- if chapter.text %}
-\begin{markdown}
-{{chapter.text}}
-\end{markdown}
-{%- endif %}
 
 {% for chapterReport in chapter.reports %}
 \section*{Chapter Summary}

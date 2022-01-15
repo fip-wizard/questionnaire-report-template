@@ -41,9 +41,6 @@
 {%- set path = path ~ "." ~ answer.uuid -%}
 {%- set humanIdentifier = humanIdentifier ~ "." ~ hi|of_alphabet -%}
 ✔️ {{ hi|of_alphabet }}. {{answer.label}}
-{% if answer.advice -%}
-💡 {{answer.advice}}
-{%- endif -%}
 {%- if answer.followups|length > 0 -%}
 {%- set hiPrefix = humanIdentifier ~ "." -%}
 {%- for question in answer.followups -%}
@@ -108,9 +105,6 @@
 #### {{humanIdentifier}} {{question.title}}
 {{- renderTags(question) -}}
 {{- renderQuestionExtras(question) -}}
-{%- if question.text %}
-> {{ question.text.replace("\n", "\n> ") }}
-{%- endif %}
 {{ renderQuestionReply(question, path, humanIdentifier) }}
 {%- endmacro -%}
 {#- ------------------------------------------------------------------------------------ -#}
@@ -134,10 +128,6 @@
 {%- endmacro -%}
 {%- macro renderChapter(chapter, humanIdentifier) -%}
 ## {{humanIdentifier|roman}}. {{chapter.title}}
-
-{%- if chapter.text %}
-> {{chapter.text.replace("\n", "\n> ")}}
-{% endif -%}
 
 {% for chapterReport in chapter.reports %}
 {{ renderReport(chapterReport) }}
