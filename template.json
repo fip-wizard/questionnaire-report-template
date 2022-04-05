@@ -1,11 +1,11 @@
 {
   "organizationId": "gofair",
   "templateId": "questionnaire-report",
-  "version": "2.4.2",
+  "version": "2.6.0",
   "name": "Questionnaire Report",
   "description": "Exported questions and answers from a questionnaire",
   "recommendedPackageId": null,
-  "metamodelVersion": 7,
+  "metamodelVersion": 9,
   "license": "Apache-2.0",
   "allowedPackages": [
     {

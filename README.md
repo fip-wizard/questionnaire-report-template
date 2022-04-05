@@ -4,6 +4,14 @@ This generic *default* template for [Data Stewardship Wizard](https://ds-wizard.
 
 ## Changelog
 
+### 2.6.0
+
+- (GOFAIR) Update to metamodel v9
+
+### 2.5.0
+
+- (GOFAIR) Update to metamodel v8
+
 ### 2.4.2
 
 - (GOFAIR) Render integration value as Markdown
