@@ -4,6 +4,10 @@ This generic *default* template for [Data Stewardship Wizard](https://ds-wizard.
 
 ## Changelog
 
+### 2.8.0
+
+- (GOFAIR) Update to metamodel v11
+
 ### 2.7.0
 
 - (GOFAIR) Update to metamodel v10
